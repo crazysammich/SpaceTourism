@@ -1,0 +1,26 @@
+.home {
+  justify-items: center;
+  align-items: end;
+  padding-block: clamp(3rem, -1.4641rem + 19.0468vw, 15.678rem)
+    clamp(3rem, 14.8%, 8.187rem);
+}
+
+.homeContentContainer {
+  max-width: clamp(38ch, 58vw, 50ch);
+}
+
+.homeContentContainer > h1 > span {
+  display: block;
+}
+
+@media only screen and (min-width: 48em) {
+  .home {
+    gap: 9.375rem 0;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .homeBtnContainer {
+    justify-self: end;
+  }
+}

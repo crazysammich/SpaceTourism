@@ -1,0 +1,11 @@
+/* #root {
+  display: grid;
+  grid-template-columns: 1.5rem repeat(4, 1fr) 1.5rem;
+  column-gap: 1.25rem;
+}
+
+@media only screen and (min-width: 48em) {
+  #root {
+    grid-template-columns: repeat(12, 1fr);
+  }
+} */
