@@ -5,8 +5,8 @@ function Home() {
   return (
     <main className={`grid ${classes.home}`}>
       <div className={classes.homeContentContainer}>
-        <h1 className="heading1">
-          <span className="heading5">so, you want to travel to</span> space
+        <h1 className="heading-1">
+          <span className="heading-5">so, you want to travel to</span> space
         </h1>
         <p>
           Let’s face it; if you want to go to space, you might as well genuinely

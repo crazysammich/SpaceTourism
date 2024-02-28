@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow&display=swap");
 
 :root {
-  --font-body: "Barlow", sans-serif;
-  --font-heading: "Bellefair", serif;
-  --font-subheading: "Barlow Condensed", sans-serif;
-  --font-button: "Bellefair";
+  --font-primary: "Barlow Condensed", sans-serif;
+  --font-secondary: "Barlow", sans-serif;
+  --font-tertiary: "Bellefair", serif;
+
+  --font-body: var(--font-secondary);
+  --font-heading: var(--font-tertiary);
+  --font-subheading-1: var(--font-tertiary);
+  --font-subheading-2: var(--font-primary);
+  --font-explore-btn: var(--font-tertiary);
+  --font-btn: var(--font-primary);
+  --font-nav: var(--font-primary);
 
   --text-primary: #d0d6f9;
   --text-secondary: #ffffff;
@@ -52,20 +59,19 @@ html {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-heading);
-}
-
-h5 {
-  font-family: var(--font-subheading);
+button {
+  font-family: var(--font-btn);
 }
 
 p {
   font-size: clamp(0.937rem, 2.09vw, 1.125rem);
-  line-height: 1.562rem;
+  line-height: clamp(1.562rem, 3.7vw, 2rem);
+}
+
+.btn-reset {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
 }
 
 .grid {
@@ -79,49 +85,62 @@ p {
   width: min(1110px, max(327px, 80%));
 }
 
-.heading1,
-.heading2,
-.heading3,
-.heading4,
-.heading5,
-.subHeading1,
-.subHeading2 {
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.subheading-1,
+.subheading-2 {
   font-weight: 400;
-  color: var(--text-secondary);
   text-transform: uppercase;
 }
 
-.heading1 {
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+}
+
+.heading-1 {
   font-size: clamp(5rem, 0.8254rem + 17.8117vw, 9.375rem);
 }
 
-.heading2 {
-  font-size: 6.25rem;
+.heading-2 {
+  /* font-size: 6.25rem; */
+  font-size: clamp(3.5rem, 8.4vw + 1rem, 6.25rem);
 }
 
-.heading3 {
+.heading-3 {
   font-size: 3.5rem;
 }
 
-.heading4 {
+.heading-4 {
   /* font-size: 2rem; */
   font-size: clamp(1.25rem, 0.392rem + 3.785vw, 2rem);
 }
 
-.heading5 {
-  font-family: var(--font-subheading);
+.heading-5 {
+  font-family: var(--font-subheading-2);
   font-size: clamp(1rem, 0.7256rem + 1.1707vw, 1.75rem);
-  letter-spacing: clamp(0.178rem, -0.213rem + 0.189vw, 0.295rem);
   color: var(--text-primary);
+  letter-spacing: clamp(0.178rem, -0.213rem + 0.189vw, 0.295rem);
 }
 
-.subHeading1 {
+.subheading-1 {
+  font-family: var(--font-subheading-1);
   font-size: 1.75rem;
-  font-family: var(--font-subheading);
+  color: var(--text-secondary);
+  text-transform: uppercase;
 }
 
-.subHeading2 {
+.subheading-2 {
+  font-family: var(--font-subheading-2);
   font-size: 0.875rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
   letter-spacing: 2.35px;
 }
 
