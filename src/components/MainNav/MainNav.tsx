@@ -1,4 +1,4 @@
-import Nav from "../Nav";
+import { Nav, NavItem } from "../Nav";
 import classes from "./MainNav.module.css";
 
 interface MainNavProps {
@@ -6,20 +6,16 @@ interface MainNavProps {
 }
 
 function MainNav({ isNavOpen }: MainNavProps) {
+  const items = ["home", "destination", "crew", "technology"];
+
   return (
     <Nav className={`${classes.mainNav} ${isNavOpen ? classes.open : ""}`}>
-      <Nav.item linkTo="home">
-        <span>00</span>home
-      </Nav.item>
-      <Nav.item linkTo="destination">
-        <span>01</span>destination
-      </Nav.item>
-      <Nav.item linkTo="crew">
-        <span>02</span>crew
-      </Nav.item>
-      <Nav.item linkTo="technology">
-        <span>03</span>technology
-      </Nav.item>
+      {items.map((item, i) => (
+        <NavItem key={i} linkTo={item}>
+          <span>0{i}</span>
+          {item}
+        </NavItem>
+      ))}
     </Nav>
   );
 }

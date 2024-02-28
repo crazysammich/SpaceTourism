@@ -8,6 +8,7 @@
 }
 
 .navItem a {
+  display: block;
   text-decoration: none;
   color: var(--text-secondary);
 }

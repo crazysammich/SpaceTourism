@@ -10,8 +10,8 @@ interface NavItemProps {
 
 function NavItem({ linkTo, children, className }: NavItemProps) {
   return (
-    <li className={`${classes.navItem}`}>
-      <NavLink className={`${className ? className : ""}`} to={linkTo}>
+    <li className={`${classes.navItem} ${className ? className : ""}`}>
+      <NavLink className={classes.navLink} to={`/${linkTo}` || ""}>
         {children}
       </NavLink>
     </li>

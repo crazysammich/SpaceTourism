@@ -1,20 +1,17 @@
-import { ReactNode } from "react";
-import NavItem from "./NavItem";
 import classes from "./Nav.module.css";
+import { ReactNode } from "react";
 
 interface NavProps {
   children?: ReactNode;
   className?: string;
 }
 
-function Nav({ children, className, ...props }: NavProps) {
+function Nav({ children, className }: NavProps) {
   return (
-    <nav className={`${classes.nav} ${className ? className : ""}`} {...props}>
+    <nav className={`${classes.nav} ${className ? className : ""}`}>
       <ul>{children}</ul>
     </nav>
   );
 }
-
-Nav.item = NavItem;
 
 export default Nav;
