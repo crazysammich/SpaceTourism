@@ -1,0 +1,17 @@
+h1.destinationHeading {
+  color: var(--text-secondary);
+}
+
+div.destinationContainer {
+  gap: 0;
+}
+
+.destinationHeading span {
+  opacity: 0.25;
+  font-weight: bold;
+  margin-inline-end: 0.6em;
+}
+
+.destinationImg {
+  width: 52%;
+}

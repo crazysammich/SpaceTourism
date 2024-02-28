@@ -4,8 +4,10 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import { AppLayout } from "./layouts";
 import { Suspense, lazy } from "react";
+import { destinationLoader } from "./pages";
+
+import { AppLayout } from "./layouts";
 const Home = lazy(() => import("./pages/Home"));
 const Destination = lazy(() => import("./pages/Destination"));
 const Crew = lazy(() => import("./pages/Crew"));
@@ -30,6 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/destination",
         element: <Destination />,
+        loader: destinationLoader,
       },
       {
         path: "/crew",

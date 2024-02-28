@@ -1,0 +1,26 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-block-start: clamp(2rem, 6.6vw, 3.375rem);
+  border-top: 1px solid #383b4b;
+  padding-block-start: 2rem;
+}
+
+.label {
+  padding-block-end: 0.75rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .details {
+    flex-direction: row;
+    column-gap: 5rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .details {
+    justify-content: flex-start;
+  }
+}
