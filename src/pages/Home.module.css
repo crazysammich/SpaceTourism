@@ -1,8 +1,7 @@
 .home {
   justify-items: center;
   align-items: end;
-  padding-block: clamp(3rem, -1.4641rem + 19.0468vw, 15.678rem)
-    clamp(3rem, 14.8%, 8.187rem);
+  padding-block: 1.5rem clamp(3rem, 14.8%, 8.187rem);
 }
 
 .homeContentContainer {
@@ -15,11 +14,18 @@
 
 @media only screen and (min-width: 48em) {
   .home {
+    padding-block-start: 4.125rem;
+  }
+
+  main.home {
     gap: 9.375rem 0;
   }
 }
 
 @media only screen and (min-width: 64em) {
+  .home {
+    padding-block-start: 10.937rem;
+  }
   .homeBtnContainer {
     justify-self: end;
   }
