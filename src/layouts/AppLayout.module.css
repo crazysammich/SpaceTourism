@@ -4,56 +4,56 @@
 
 .page-home {
   background: no-repeat center / cover
-    url("/public/assets/home/background-home-mobile.jpg");
+    url("/assets/home/background-home-mobile.jpg");
 }
 
 .page-destination {
   background: no-repeat center / cover
-    url("/public/assets/destination/background-destination-mobile.jpg");
+    url("/assets/destination/background-destination-mobile.jpg");
 }
 
 .page-crew {
   background: no-repeat center / cover
-    url("/public/assets/crew/background-crew-mobile.jpg");
+    url("/assets/crew/background-crew-mobile.jpg");
 }
 
 .page-technology {
   background: no-repeat center / cover
-    url("/public/assets/technology/background-technology-mobile.jpg");
+    url("/assets/technology/background-technology-mobile.jpg");
 }
 
 @media only screen and (min-width: 48em) {
   .page-home {
-    background-image: url("/public/assets/home/background-home-tablet.jpg");
+    background-image: url("/assets/home/background-home-tablet.jpg");
   }
 
   .page-destination {
-    background-image: url("/public/assets/destination/background-destination-tablet.jpg");
+    background-image: url("/assets/destination/background-destination-tablet.jpg");
   }
 
   .page-crew {
-    background-image: url("/public/assets/crew/background-crew-tablet.jpg");
+    background-image: url("/assets/crew/background-crew-tablet.jpg");
   }
 
   .page-technology {
-    background-image: url("/public/assets/technology/background-technology-tablet.jpg");
+    background-image: url("/assets/technology/background-technology-tablet.jpg");
   }
 }
 
 @media only screen and (min-width: 64em) {
   .page-home {
-    background-image: url("/public/assets/home/background-home-desktop.jpg");
+    background-image: url("/assets/home/background-home-desktop.jpg");
   }
 
   .page-destination {
-    background-image: url("/public/assets//destination/background-destination-desktop.jpg");
+    background-image: url("/assets//destination/background-destination-desktop.jpg");
   }
 
   .page-crew {
-    background-image: url("/public/assets/crew/background-crew-desktop.jpg");
+    background-image: url("/assets/crew/background-crew-desktop.jpg");
   }
 
   .page-technology {
-    background-image: url("/public/assets/technology/background-technology-desktop.jpg");
+    background-image: url("/assets/technology/background-technology-desktop.jpg");
   }
 }

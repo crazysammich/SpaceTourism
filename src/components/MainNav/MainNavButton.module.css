@@ -4,11 +4,11 @@
   border: 0;
   width: 1.5rem;
   height: 1.5rem;
-  background: no-repeat url("/public/assets/shared/icon-hamburger.svg");
+  background: no-repeat url("/assets/shared/icon-hamburger.svg");
 }
 
 .active {
-  background: no-repeat url("/public/assets/shared/icon-close.svg");
+  background: no-repeat url("/assets/shared/icon-close.svg");
 }
 
 @media only screen and (min-width: 48em) {
