@@ -16,6 +16,18 @@
   transform: translateX(100%);
 }
 
+.mainNav::before {
+  content: "";
+  position: absolute;
+  right: 97%;
+  top: 50%;
+  display: none;
+  opacity: 0.25;
+  width: min(29.7rem, 33.8vw);
+  height: 1px;
+  background-color: var(--background-secondary);
+}
+
 .mainNav ul {
   flex-direction: column;
 }
@@ -50,5 +62,11 @@
 @media only screen and (min-width: 48em) and (max-width: 64em) {
   .mainNav span {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .mainNav::before {
+    display: block;
   }
 }
