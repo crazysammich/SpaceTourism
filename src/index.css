@@ -18,14 +18,13 @@
   --text-tertiary: #0b0d17;
 
   --background-primary: #0b0d17;
+  --background-secondary: #ffffff;
 
   --btn-bg-color-primary: #ffffff;
 
   --border-color-primary: #ffffff;
   --border-hover-color: #979797;
 
-  /* font-family: var(--font-secondary), serif; */
-  /* font-size: clamp(0.875rem, 100%, 1.125rem); */
   font-size: 1rem;
   font-family: var(--font-body), sans-serif;
   line-height: 1.5;
@@ -85,6 +84,10 @@ p {
   width: min(1110px, max(327px, 80%));
 }
 
+.page-heading {
+  padding-block: 0 2rem;
+}
+
 .heading-1,
 .heading-2,
 .heading-3,
@@ -142,6 +145,20 @@ p {
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 2.35px;
+}
+
+.fade-in {
+  animation: fade-in 250ms ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 52em) {

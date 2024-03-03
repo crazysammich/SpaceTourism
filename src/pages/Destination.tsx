@@ -15,7 +15,7 @@ function Destination() {
   const destinationItems = destinations.map((dest) => {
     return {
       title: dest.name,
-      content: <DestinationItem destination={dest} />,
+      content: <DestinationItem key={dest.name} destination={dest} />,
     };
   });
 
@@ -29,7 +29,10 @@ function Destination() {
         <span>01</span> pick your destination
       </h1>
       <div className={`grid ${classes.destinationContainer} `}>
-        <div className={classes.destinationImg}>
+        <div
+          className={`${classes.destinationImg} fade-in`}
+          key={currDestination}
+        >
           <img
             src={destinationImg}
             alt={`an image of the ${currDestination}`}

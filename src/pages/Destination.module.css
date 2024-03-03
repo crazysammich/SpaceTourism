@@ -1,9 +1,15 @@
+.destinationContainer {
+  padding-block: 2rem;
+}
+
 h1.destinationHeading {
   color: var(--text-secondary);
 }
 
 div.destinationContainer {
-  gap: 0;
+  justify-items: center;
+  align-items: center;
+  gap: 1.625rem 9.812rem;
 }
 
 .destinationHeading span {
@@ -13,5 +19,18 @@ div.destinationContainer {
 }
 
 .destinationImg {
-  width: 52%;
+  width: clamp(10.937rem, 40vw, 27.812rem);
+  height: clamp(10.937rem, 40vw, 27.812rem);
+}
+
+@media only screen and (min-width: 48em) {
+  .destinationContainer {
+    padding-block: 3.75rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .destinationContainer {
+    padding-block: 4rem;
+  }
 }
