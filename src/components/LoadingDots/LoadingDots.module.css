@@ -11,28 +11,20 @@
   background-color: #313131b5;
 }
 
-.loadingDots circle {
-  animation: fade 500ms steps(2, jump-none) infinite alternate;
+.mainDot {
+  animation: move-left 300ms steps(2, jump-none) infinite alternate;
 }
 
-.loadingDots circle:nth-child(1) {
-  animation-delay: 650ms;
-}
-
-.loadingDots circle:nth-child(2) {
-  animation-delay: 450ms;
-}
-
-.loadingDots circle:nth-child(3) {
-  animation-delay: 250ms;
-}
-
-@keyframes fade {
+@keyframes move-left {
   0% {
-    opacity: 0.5;
+    translate: 0%;
+  }
+
+  50% {
+    translate: -30%;
   }
 
   100% {
-    opacity: 1;
+    translate: -60%;
   }
 }
