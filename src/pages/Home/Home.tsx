@@ -1,4 +1,4 @@
-import { HomeButton } from "../components";
+import { HomeButton } from "../../components";
 import classes from "./Home.module.css";
 
 function Home() {

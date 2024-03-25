@@ -1,13 +1,13 @@
-import type { Destination } from "../types";
+import type { DestinationType } from "../../types";
 import { useLoaderData } from "react-router-dom";
-import { DestinationsTabs } from "../components";
+import { DestinationsTabs } from "../../components";
 import { useState } from "react";
 
 import classes from "./Destination.module.css";
 
 function Destination() {
   const [currDestination, setCurrDestination] = useState("Moon");
-  const destinations = useLoaderData() as Destination[];
+  const destinations = useLoaderData() as DestinationType[];
   const destinationImg = destinations.filter(
     (dest) => dest.name === currDestination
   )[0].images.png;
@@ -40,17 +40,4 @@ function Destination() {
   );
 }
 
-async function loader() {
-  try {
-    const res = await fetch("data.json");
-    const { destinations } = await res.json();
-    return destinations;
-  } catch (error) {
-    if (typeof error === "string") {
-      throw new Error(error);
-    }
-  }
-}
-
-export { loader as destinationLoader };
 export default Destination;
