@@ -13,6 +13,10 @@ function MainNavButton({ isNavOpen, onOpenNav }: MainNavButtonProps) {
   return (
     <button
       className={`${classes.mainNavBtn} ${isNavOpen ? classes.active : ""}`}
+      aria-label="main-navigation-button"
+      aria-controls="main-navigation"
+      aria-roledescription="opens the main navigation menu of the website"
+      aria-description="opens the main navigation menu of the website"
       onClick={handleOnClick}
     ></button>
   );

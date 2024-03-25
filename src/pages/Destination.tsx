@@ -1,6 +1,6 @@
 import type { Destination } from "../types";
 import { useLoaderData } from "react-router-dom";
-import { DestinationItem, DestinationsTabs } from "../components";
+import { DestinationsTabs } from "../components";
 import { useState } from "react";
 
 import classes from "./Destination.module.css";
@@ -12,20 +12,13 @@ function Destination() {
     (dest) => dest.name === currDestination
   )[0].images.png;
 
-  const destinationItems = destinations.map((dest) => {
-    return {
-      title: dest.name,
-      content: <DestinationItem key={dest.name} destination={dest} />,
-    };
-  });
-
   function handleOnDestChange(dest: string) {
     setCurrDestination(dest);
   }
 
   return (
     <main>
-      <h1 className={`heading-5 ${classes.destinationHeading}`}>
+      <h1 className="heading-5 page-heading">
         <span>01</span> pick your destination
       </h1>
       <div className={`grid ${classes.destinationContainer} `}>
@@ -39,7 +32,7 @@ function Destination() {
           />
         </div>
         <DestinationsTabs
-          tabs={destinationItems}
+          destinations={destinations}
           onDestChange={handleOnDestChange}
         />
       </div>

@@ -1,3 +1,20 @@
+.mainNavWrapper {
+  position: fixed;
+}
+
+.mainNavClickArea {
+  display: none;
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.mainNavClickArea.active {
+  display: block;
+}
+
 .mainNav {
   /* display: block; */
   position: fixed;
@@ -43,6 +60,9 @@
 }
 
 @media only screen and (min-width: 48em) {
+  .mainNavWrapper {
+    position: static;
+  }
   .mainNav {
     position: static;
     visibility: visible;

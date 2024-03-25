@@ -1,4 +1,4 @@
-import type { Destination } from "../../types";
+import type { Destination } from "../../../types";
 import classes from "./DestinationItem.module.css";
 
 interface DestinationItemProps {
@@ -7,7 +7,7 @@ interface DestinationItemProps {
 
 function DestinationItem({ destination }: DestinationItemProps) {
   return (
-    <article className={`${classes.destination} fade-in`}>
+    <article className={`fade-in`}>
       <h2 className="heading-2">{destination.name}</h2>
       <p>{destination.description}</p>
       <section className={classes.details}>
