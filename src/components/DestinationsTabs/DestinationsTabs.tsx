@@ -1,11 +1,11 @@
 import { useState } from "react";
-import type { Destination } from "../../types";
+import type { DestinationType } from "../../types";
 import classes from "./DestinationsTabs.module.css";
 import { DestinationItem } from "./DestinationItem";
 
 interface DestinationsTabs {
   className?: string;
-  destinations: Destination[];
+  destinations: DestinationType[];
   onDestChange: (dest: string) => void;
 }
 
