@@ -1,0 +1,16 @@
+.crewCarousel {
+  background: transparent;
+}
+
+.crewCarousel button {
+  opacity: 0.17;
+}
+
+.crewCarousel button:hover {
+  opacity: 0.5;
+}
+
+.crewCarousel button:global(.active) {
+  opacity: 1;
+  background-color: var(--background-secondary);
+}
