@@ -84,8 +84,13 @@ p {
   width: min(1110px, max(327px, 80%));
 }
 
-.page-heading {
-  padding-block: 0 2rem;
+h1.page-heading {
+  color: var(--text-secondary);
+}
+
+h1.page-heading > span {
+  font-weight: bold;
+  opacity: 0.25;
 }
 
 .heading-1,
