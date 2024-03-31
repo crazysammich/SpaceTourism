@@ -9,7 +9,7 @@ function Header() {
       <div className={classes.navContainer}>
         <Logo />
         <MainNavButton isNavOpen={isMainNavOpen} onOpenNav={setIsMainNavOpen} />
-        <MainNav isNavOpen={isMainNavOpen} />
+        <MainNav isNavOpen={isMainNavOpen} onNavClick={setIsMainNavOpen} />
       </div>
     </header>
   );

@@ -16,11 +16,9 @@
 }
 
 .mainNav {
-  /* display: block; */
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1;
   visibility: hidden;
   width: min(254px, 67.7%);
   min-height: 100%;
