@@ -5,13 +5,13 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import { destinationLoader } from "./pages";
+import { crewLoader, destinationLoader } from "./pages";
 
 import { AppLayout } from "./layouts";
-const Home = lazy(() => import("./pages/Home"));
-const Destination = lazy(() => import("./pages/Destination"));
-const Crew = lazy(() => import("./pages/Crew"));
-const Technology = lazy(() => import("./pages/Technology"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const Destination = lazy(() => import("./pages/Destination/Destination"));
+const Crew = lazy(() => import("./pages/Crew/Crew"));
+const Technology = lazy(() => import("./pages/Technology/Technology"));
 
 const router = createBrowserRouter([
   {
