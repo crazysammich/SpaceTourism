@@ -3,17 +3,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0;
-  border-radius: 50%;
-  font-family: var(--font-button), serif;
-  font-size: clamp(1.25rem, 0.392rem + 3.785vw, 2rem);
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  background-color: var(--btn-bg-color-primary);
-  text-decoration: none;
-  transition: box-shadow 200ms ease;
   width: clamp(9.375rem, 3.8393rem + 23.619vw, 17.125rem);
   height: clamp(9.375rem, 3.8393rem + 23.619vw, 17.125rem);
+  border: 0;
+  border-radius: 50%;
+  font-family: var(--font-explore-btn), serif;
+  font-size: clamp(1.25rem, 0.392rem + 3.785vw, 2rem);
+  color: var(--text-tertiary);
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--btn-bg-color-primary);
+  transition: box-shadow 200ms ease;
 }
 
 .homeBtn:hover {
