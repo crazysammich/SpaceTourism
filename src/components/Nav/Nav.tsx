@@ -1,5 +1,5 @@
 import classes from "./Nav.module.css";
-import { MouseEventHandler, ReactNode } from "react";
+import { MouseEventHandler, ReactNode, forwardRef } from "react";
 
 interface NavProps {
   children?: ReactNode;
@@ -7,15 +7,20 @@ interface NavProps {
   onClick?: MouseEventHandler;
 }
 
-function Nav({ children, className, onClick }: NavProps) {
-  return (
-    <nav
-      className={`${classes.nav} ${className ? className : ""}`}
-      onClick={onClick}
-    >
-      <ul>{children}</ul>
-    </nav>
-  );
-}
+type Ref = HTMLElement;
+
+const Nav = forwardRef<Ref, NavProps>(
+  ({ children, className, onClick }, ref) => {
+    return (
+      <nav
+        className={`${classes.nav} ${className ? className : ""}`}
+        onClick={onClick}
+        ref={ref}
+      >
+        <ul>{children}</ul>
+      </nav>
+    );
+  }
+);
 
 export default Nav;
