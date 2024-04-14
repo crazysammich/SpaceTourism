@@ -32,7 +32,7 @@ function DestinationsTabs({
       <ul className={classes.tabs}>
         {destinationItems.map((tab, i) => (
           <li
-            key={i}
+            key={tab.title}
             className={`${classes.tab} ${
               i === activeTab ? classes.active : ""
             }`}
