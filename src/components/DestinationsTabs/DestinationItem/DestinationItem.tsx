@@ -1,8 +1,8 @@
-import type { Destination } from "../../../types";
+import type { DestinationType } from "../../../types";
 import classes from "./DestinationItem.module.css";
 
 interface DestinationItemProps {
-  destination: Destination;
+  destination: DestinationType;
 }
 
 function DestinationItem({ destination }: DestinationItemProps) {
