@@ -1,18 +1,18 @@
 import { Dispatch, SetStateAction } from "react";
-import classes from "./MainNavButton.module.css";
+import classes from "./NavMenuToggle.module.css";
 
-interface MainNavButtonProps {
+interface NavMenuToggle {
   isNavOpen: boolean;
   onOpenNav: Dispatch<SetStateAction<boolean>>;
 }
 
-function MainNavButton({ isNavOpen, onOpenNav }: MainNavButtonProps) {
+function NavMenuToggle({ isNavOpen, onOpenNav }: NavMenuToggle) {
   function handleOnClick() {
     onOpenNav((prev) => !prev);
   }
   return (
     <button
-      className={`${classes.mainNavBtn} ${isNavOpen ? classes.active : ""}`}
+      className={`${classes.navMenuToggle} ${isNavOpen ? classes.active : ""}`}
       aria-label="main-navigation-button"
       aria-controls="main-navigation"
       aria-roledescription="opens the main navigation menu of the website"
@@ -22,4 +22,4 @@ function MainNavButton({ isNavOpen, onOpenNav }: MainNavButtonProps) {
   );
 }
 
-export default MainNavButton;
+export default NavMenuToggle;

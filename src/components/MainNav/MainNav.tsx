@@ -1,46 +1,31 @@
-import { Dispatch, SetStateAction, useEffect, useRef } from "react";
-import { Nav, NavItem } from "../Nav";
+import MainNavItem from "./MainNavItem";
 import classes from "./MainNav.module.css";
+import { MouseEventHandler, forwardRef } from "react";
 
 interface MainNavProps {
-  isNavOpen: boolean;
-  onNavClick: Dispatch<SetStateAction<boolean>>;
+  className?: string;
+  onClick?: MouseEventHandler;
 }
 
-function MainNav({ isNavOpen, onNavClick }: MainNavProps) {
+type Ref = HTMLUListElement;
+
+const MainNav = forwardRef<Ref, MainNavProps>(({ className, onClick }, ref) => {
   const items = ["home", "destination", "crew", "technology"];
-  const navRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    if (isNavOpen) {
-      navRef.current?.focus();
-    }
-  }, [isNavOpen]);
-
-  function handleOnNavClick() {
-    onNavClick(false);
-  }
 
   return (
-    <div className={classes.mainNavWrapper} onClick={handleOnNavClick}>
-      <div
-        className={`${classes.mainNavClickArea} ${
-          isNavOpen ? classes.active : ""
-        }`}
-      ></div>
-      <Nav
-        className={`${classes.mainNav} ${isNavOpen ? classes.open : ""}`}
-        ref={navRef}
-      >
-        {items.map((item, i) => (
-          <NavItem key={i} linkTo={item}>
-            <span>0{i}</span>
-            {item}
-          </NavItem>
-        ))}
-      </Nav>
-    </div>
+    <ul
+      className={`${classes.mainNav} ${className ? className : ""}`}
+      onClick={onClick}
+      ref={ref}
+    >
+      {items.map((item, i) => (
+        <MainNavItem key={i} linkTo={item}>
+          <span>0{i}</span>
+          {item}
+        </MainNavItem>
+      ))}
+    </ul>
   );
-}
+});
 
 export default MainNav;

@@ -1,16 +1,16 @@
 import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
-import classes from "./NavItem.module.css";
+import classes from "./MainNavItem.module.css";
 
-interface NavItemProps {
+interface MainNavItem {
   children?: ReactNode;
   className?: string;
   linkTo: string;
 }
 
-function NavItem({ linkTo, children, className }: NavItemProps) {
+function MainNavItem({ linkTo, children, className }: MainNavItem) {
   return (
-    <li className={`${classes.navItem} ${className ? className : ""}`}>
+    <li className={`${classes.mainNavItem} ${className ? className : ""}`}>
       <NavLink className={classes.navLink} to={`/${linkTo}` || ""}>
         {children}
       </NavLink>
@@ -18,4 +18,4 @@ function NavItem({ linkTo, children, className }: NavItemProps) {
   );
 }
 
-export default NavItem;
+export default MainNavItem;

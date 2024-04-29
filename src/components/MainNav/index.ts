@@ -1,2 +1,2 @@
 export { default as MainNav } from "./MainNav";
-export { default as MainNavButton } from "./MainNavButton";
+export { default as MainNavItem } from "./MainNavItem";

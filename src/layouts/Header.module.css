@@ -4,24 +4,3 @@
   top: 0;
   z-index: 100;
 }
-
-.navContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem;
-}
-
-@media only screen and (min-width: 48em) {
-  .navContainer {
-    padding-block: 0 2.5rem;
-    padding-inline: 1.5rem 0;
-  }
-}
-
-@media only screen and (min-width: 64em) {
-  .navContainer {
-    padding-block: 2.5rem 4.75rem;
-    padding-inline: 3.4375rem 0;
-  }
-}
