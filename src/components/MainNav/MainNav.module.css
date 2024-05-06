@@ -1,13 +1,10 @@
 .mainNav {
   display: flex;
+  flex-direction: column;
   gap: 2rem 2rem;
   list-style: none;
   text-align: left;
   font-family: var(--font-nav);
-}
-
-.mainNav {
-  flex-direction: column;
 }
 
 @media only screen and (min-width: 48em) and (max-width: 64em) {

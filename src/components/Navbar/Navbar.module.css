@@ -5,10 +5,6 @@
   padding: 1.5rem;
 }
 
-/* .mainNavWrapper {
-  position: fixed;
-} */
-
 .navbarMenu {
   position: fixed;
   right: 0;
@@ -25,28 +21,14 @@
   transform: translateX(100%);
 }
 
-.navbarMenu::before {
-  content: "";
-  position: absolute;
-  right: 97%;
-  top: 50%;
-  display: none;
-  opacity: 0.25;
-  width: min(29.7rem, 33.8vw);
-  height: 1px;
-  background-color: var(--background-secondary);
-}
-
 .navbarMenu {
   flex-direction: column;
 }
 
 .navbarMenu span {
-  font-weight: bold;
-  margin-inline-end: 0.6em;
 }
 
-.navMenuOpen {
+.navbarMenuOpen {
   visibility: visible;
   transform: translateX(0%);
 }

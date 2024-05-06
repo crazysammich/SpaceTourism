@@ -17,14 +17,19 @@
   border-inline-end: 3px solid var(--border-color-primary);
 }
 
+.mainNavItem span {
+  font-weight: bold;
+  margin-inline-end: 0.6em;
+}
+
 @media only screen and (min-width: 48em) and (max-width: 64em) {
-  .mainNav span {
+  .mainNavItem span {
     display: none;
   }
 }
 
 @media only screen and (min-width: 48em) {
-  .mainNavItem {
+  .mainNavItem a {
     padding-block: 2em;
   }
 

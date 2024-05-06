@@ -14,13 +14,14 @@ const MainNav = forwardRef<Ref, MainNavProps>(({ className, onClick }, ref) => {
 
   return (
     <ul
+      id="main-nav"
       className={`${classes.mainNav} ${className ? className : ""}`}
       onClick={onClick}
       ref={ref}
     >
       {items.map((item, i) => (
         <MainNavItem key={i} linkTo={item}>
-          <span>0{i}</span>
+          <span aria-hidden="true">0{i}</span>
           {item}
         </MainNavItem>
       ))}

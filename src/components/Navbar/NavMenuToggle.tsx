@@ -13,10 +13,10 @@ function NavMenuToggle({ isNavOpen, onOpenNav }: NavMenuToggle) {
   return (
     <button
       className={`${classes.navMenuToggle} ${isNavOpen ? classes.active : ""}`}
-      aria-label="main-navigation-button"
-      aria-controls="main-navigation"
+      aria-label="navigation menu button"
+      aria-controls="main-nav"
+      aria-expanded={isNavOpen}
       aria-roledescription="opens the main navigation menu of the website"
-      aria-description="opens the main navigation menu of the website"
       onClick={handleOnClick}
     ></button>
   );

@@ -25,7 +25,7 @@ function Navbar() {
         <NavMenuToggle isNavOpen={isNavMenuOpen} onOpenNav={setIsNavMenuOpen} />
         <div
           className={`${classes.navbarMenu} ${
-            isNavMenuOpen ? classes.navMenuOpen : ""
+            isNavMenuOpen ? classes.navbarMenuOpen : ""
           }`}
           onClick={handleOnNavMenuClick}
         >
