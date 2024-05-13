@@ -19,18 +19,16 @@ function Navbar() {
   }
 
   return (
-    <nav>
-      <div className={classes.navContainer}>
-        <Logo />
-        <NavMenuToggle isNavOpen={isNavMenuOpen} onOpenNav={setIsNavMenuOpen} />
-        <div
-          className={`${classes.navbarMenu} ${
-            isNavMenuOpen ? classes.navbarMenuOpen : ""
-          }`}
-          onClick={handleOnNavMenuClick}
-        >
-          <MainNav ref={navRef} />
-        </div>
+    <nav className={classes.navbar}>
+      <Logo />
+      <NavMenuToggle isNavOpen={isNavMenuOpen} onOpenNav={setIsNavMenuOpen} />
+      <div
+        className={`${classes.navbarMenu} ${
+          isNavMenuOpen ? classes.navbarMenuOpen : ""
+        }`}
+        onClick={handleOnNavMenuClick}
+      >
+        <MainNav ref={navRef} />
       </div>
     </nav>
   );

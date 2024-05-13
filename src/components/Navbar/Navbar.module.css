@@ -1,4 +1,4 @@
-.navContainer {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,13 +19,23 @@
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 4%);
   transform: translateX(100%);
+
+  /* Graphical line */
+  &::before {
+    content: "";
+    position: absolute;
+    right: 97%;
+    top: 50%;
+    display: none;
+    opacity: 0.25;
+    width: min(29.7rem, 33.8vw);
+    height: 1px;
+    background-color: var(--background-secondary);
+  }
 }
 
 .navbarMenu {
   flex-direction: column;
-}
-
-.navbarMenu span {
 }
 
 .navbarMenuOpen {
@@ -34,7 +44,7 @@
 }
 
 @media only screen and (min-width: 48em) {
-  .navContainer {
+  .navbar {
     padding-block: 0 2.5rem;
     padding-inline: 1.5rem 0;
   }
@@ -59,7 +69,7 @@
 }
 
 @media only screen and (min-width: 64em) {
-  .navContainer {
+  .navbar {
     padding-block: 2.5rem 4.75rem;
     padding-inline: 3.4375rem 0;
   }
