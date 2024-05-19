@@ -37,6 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/crew",
         element: <Crew />,
+        loader: crewLoader,
       },
       {
         path: "/technology",

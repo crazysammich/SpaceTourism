@@ -1,0 +1,33 @@
+.crewCarouselItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 250px;
+}
+
+.crewRole {
+  opacity: 0.5;
+}
+
+.crewBio {
+  width: min(45ch, 100%);
+  padding-block-start: 1.6rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .crewCarouselItem {
+    min-height: clamp(11.375rem, 10vw, 16.875rem);
+  }
+  .crewBio {
+    width: 65ch;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .crewCarouselItem {
+    display: block;
+  }
+  .crewBio {
+    width: 45ch;
+  }
+}

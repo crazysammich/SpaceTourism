@@ -2,15 +2,47 @@
   background: transparent;
 }
 
-.crewCarousel button {
-  opacity: 0.17;
+.crewCarousel :global(.carousel-content) {
+  padding-block: 10% 0;
 }
 
-.crewCarousel button:hover {
+.crewCarousel :global(.carousel-indicators) {
+  top: 0;
+}
+
+.crewCarousel :global(.carousel-indicator) {
+  opacity: 0.17;
+  width: 10px;
+  height: 10px;
+  background-color: var(--background-secondary);
+}
+
+.crewCarousel :global(.carousel-indicator):hover {
   opacity: 0.5;
 }
 
-.crewCarousel button:global(.active) {
+.crewCarousel :global(.carousel-indicator):global(.active) {
   opacity: 1;
-  background-color: var(--background-secondary);
+}
+
+@media only screen and (min-width: 48em) {
+  .crewCarousel :global(.carousel-content) {
+    padding-block: clamp(3.75rem, 14vw + -3rem, 9.625rem) 6.6%;
+  }
+
+  .crewCarousel :global(.carousel-indicators) {
+    top: auto;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .crewCarousel :global(.carousel-indicators) {
+    justify-content: flex-start;
+    margin-block-end: 15%;
+  }
+
+  .crewCarousel :global(.carousel-indicator) {
+    width: 15px;
+    height: 15px;
+  }
 }

@@ -8,3 +8,13 @@ export type DestinationType = {
   distance: string;
   travel: string;
 };
+
+export type CrewType = {
+  name: string;
+  role: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  bio: string;
+};

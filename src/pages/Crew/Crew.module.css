@@ -1,0 +1,30 @@
+:global(.grid).crewSectionWrapper {
+  gap: 6% 0;
+}
+
+@media only screen and (max-width: 24em) {
+  .crewSectionWrapper {
+    margin-block: 10% 0;
+  }
+}
+
+.crewSectionWrapper > div:nth-of-type(1) {
+  order: 2;
+}
+
+.crewSectionWrapper > div:nth-of-type(2) {
+  order: 1;
+}
+
+@media only screen and (min-width: 48em) {
+  .crewSectionWrapper > div:nth-of-type(1),
+  .crewSectionWrapper > div:nth-of-type(2) {
+    order: initial;
+  }
+}
+
+@media only screen and (min-width: 85em) {
+  :global(.grid).crewSectionWrapper {
+    grid-template-columns: minmax(327px, 627px) 1fr;
+  }
+}
