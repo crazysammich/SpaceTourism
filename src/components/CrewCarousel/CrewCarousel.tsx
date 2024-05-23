@@ -1,4 +1,4 @@
-import Carousel from "../../lib/";
+import { Carousel } from "../../lib/";
 import type { CrewType } from "../../types";
 import classes from "./CrewCarousel.module.css";
 import CrewCarouselItem from "./CrewCarouselItem";

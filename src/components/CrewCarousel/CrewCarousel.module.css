@@ -2,46 +2,46 @@
   background: transparent;
 }
 
-.crewCarousel :global(.carousel-content) {
+.crewCarousel :global(.carousel__content) {
   padding-block: 10% 0;
 }
 
-.crewCarousel :global(.carousel-indicators) {
+.crewCarousel :global(.carousel__indicators) {
   top: 0;
 }
 
-.crewCarousel :global(.carousel-indicator) {
+.crewCarousel :global(.carousel__indicator) {
   opacity: 0.17;
   width: 10px;
   height: 10px;
   background-color: var(--background-secondary);
 }
 
-.crewCarousel :global(.carousel-indicator):hover {
+.crewCarousel :global(.carousel__indicator):hover {
   opacity: 0.5;
 }
 
-.crewCarousel :global(.carousel-indicator):global(.active) {
+.crewCarousel :global(.carousel__indicator):global(.active) {
   opacity: 1;
 }
 
 @media only screen and (min-width: 48em) {
-  .crewCarousel :global(.carousel-content) {
+  .crewCarousel :global(.carousel__content) {
     padding-block: clamp(3.75rem, 14vw + -3rem, 9.625rem) 6.6%;
   }
 
-  .crewCarousel :global(.carousel-indicators) {
+  .crewCarousel :global(.carousel__indicators) {
     top: auto;
   }
 }
 
 @media only screen and (min-width: 64em) {
-  .crewCarousel :global(.carousel-indicators) {
+  .crewCarousel :global(.carousel__indicators) {
     justify-content: flex-start;
     margin-block-end: 15%;
   }
 
-  .crewCarousel :global(.carousel-indicator) {
+  .crewCarousel :global(.carousel__indicator) {
     width: 15px;
     height: 15px;
   }
