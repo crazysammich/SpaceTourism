@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Navbar } from "../components";
+import { throttle } from "../utils";
 import classes from "./Header.module.css";
 function Header() {
   const prevScrollPos = useRef<number>(0);
@@ -26,29 +27,6 @@ function Header() {
       <Navbar />
     </header>
   );
-}
-
-function throttle(cb: () => void, delay = 1) {
-  let isWaiting = false;
-  let pendingArgs: [] | null = null;
-  const timeoutFunc = () => {
-    if (!pendingArgs) {
-      isWaiting = false;
-    } else {
-      cb(...pendingArgs);
-      pendingArgs = null;
-      setTimeout(timeoutFunc, delay * 1000);
-    }
-  };
-  return function (...args: []) {
-    if (isWaiting) {
-      pendingArgs = args;
-      return;
-    }
-    cb(...args);
-    isWaiting = true;
-    setTimeout(timeoutFunc, delay * 1000);
-  };
 }
 
 export default Header;
