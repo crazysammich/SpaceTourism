@@ -19,7 +19,7 @@ function Navbar() {
   }
 
   return (
-    <nav className={classes.navbar}>
+    <nav className={classes.navbar} aria-label="Main">
       <Logo />
       <NavMenuToggle isNavOpen={isNavMenuOpen} onOpenNav={setIsNavMenuOpen} />
       <div
