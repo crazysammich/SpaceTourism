@@ -10,10 +10,8 @@ interface MainNavItem {
 
 function MainNavItem({ linkTo, children, className }: MainNavItem) {
   return (
-    <li className={`${classes.mainNavItem} ${className ? className : ""}`}>
-      <NavLink className={classes.navLink} to={`/${linkTo}` || ""}>
-        {children}
-      </NavLink>
+    <li className={`subheading-3 ${classes.mainNavItem} ${className || ""}`}>
+      <NavLink to={`/${linkTo}` || ""}>{children}</NavLink>
     </li>
   );
 }
