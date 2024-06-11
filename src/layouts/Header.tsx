@@ -2,20 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import { Navbar } from "../components";
 import classes from "./Header.module.css";
 function Header() {
-  const headerRef = useRef<HTMLElement>(null);
-  const lastKnownScrollY = useRef<number>(0);
+  const prevScrollPos = useRef<number>(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   useEffect(() => {
     const onPageScroll = throttle(() => {
-      if (window.scrollY < lastKnownScrollY.current) {
-        setIsHeaderVisible(true);
-        lastKnownScrollY.current = window.scrollY;
-      } else {
-        setIsHeaderVisible(false);
-        lastKnownScrollY.current = window.scrollY;
-      }
-    }, 0.25);
+      const currentScrollPos = window.scrollY;
+      setIsHeaderVisible(
+        currentScrollPos < prevScrollPos.current || currentScrollPos < 20
+      );
+      prevScrollPos.current = currentScrollPos;
+    }, 0.3);
     document.addEventListener("scroll", onPageScroll);
     return () => {
       document.removeEventListener("scroll", onPageScroll);
@@ -25,7 +22,6 @@ function Header() {
   return (
     <header
       className={`${classes.header} ${isHeaderVisible ? classes.visible : ""}`}
-      ref={headerRef}
     >
       <Navbar />
     </header>
