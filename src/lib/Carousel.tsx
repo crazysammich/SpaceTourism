@@ -1,11 +1,12 @@
+import type { IndicatorProps } from "@crazysammich/react-components-lib";
 import { Carousel as Cs } from "@crazysammich/react-components-lib";
 import { ComponentType } from "react";
-import type { IndicatorProps } from "@crazysammich/react-components-lib";
 
 interface CarouselProps {
-  className?: string;
   items: JSX.Element[];
+  className?: string;
   Indicator?: ComponentType<IndicatorProps>;
+  type?: "horizontal" | "vertical";
   autoPlay?: {
     auto: boolean;
     delay?: number;
@@ -15,16 +16,18 @@ interface CarouselProps {
 }
 
 function Carousel({
-  className,
   items,
+  className,
+  type,
   Indicator,
   autoPlay,
   onIndictClick,
 }: CarouselProps) {
   return (
     <Cs
-      className={className ? className : ""}
+      className={className || ""}
       items={items}
+      type={type}
       Indicator={Indicator}
       autoPlay={autoPlay}
       onIndictClick={onIndictClick}
