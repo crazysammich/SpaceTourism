@@ -152,6 +152,14 @@ p {
   letter-spacing: 2.35px;
 }
 
+.subheading-3 {
+  font-family: var(--font-subheading-3);
+  color: var(--text-secondary);
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 .fade-in {
   animation: fade-in 250ms ease-in;
 }
