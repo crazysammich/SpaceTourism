@@ -18,3 +18,12 @@ export type CrewType = {
   };
   bio: string;
 };
+
+export type TechType = {
+  name: string;
+  images: {
+    portrait: string;
+    landscape: string;
+  };
+  description: string;
+};

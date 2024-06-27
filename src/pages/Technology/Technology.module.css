@@ -1,0 +1,29 @@
+.techSectionWrapper:global(.grid) {
+  justify-items: center;
+  gap: 0;
+}
+
+.techPageHeading {
+  margin-block: 0 clamp(2rem, 8vw, 3.75rem);
+}
+
+@media screen and (min-width: 64em) and (max-width: 80em) {
+  .techSectionWrapper:global(.grid) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .techSectionWrapper > div:nth-of-type(1) {
+    order: 2;
+  }
+  .techPageHeading {
+    margin-block: 0 1.625rem;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .techSectionWrapper:global(.grid) {
+    grid-template-columns: 39.375rem 1fr;
+  }
+}

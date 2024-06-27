@@ -1,0 +1,31 @@
+.techCarousel {
+  :global(.carousel__content) {
+    margin-block-start: clamp(6.25rem, 21vw, 10rem);
+  }
+
+  :global(.carousel__indicators) {
+    bottom: auto;
+    top: 0;
+    margin-block: clamp(2.125rem, 8vw, 3.5rem) 0;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .techCarousel {
+    display: flex;
+    align-items: center;
+
+    :global(.carousel__content) {
+      margin-inline-start: 25%;
+      margin-block: 0;
+    }
+
+    :global(.carousel__indicators) {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: min-content;
+      margin: 0;
+    }
+  }
+}

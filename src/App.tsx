@@ -8,6 +8,7 @@ import { Suspense, lazy } from "react";
 import { crewLoader, destinationLoader } from "./pages";
 
 import { AppLayout } from "./layouts";
+import { technologyLoader } from "./pages/Technology";
 const Home = lazy(() => import("./pages/Home/Home"));
 const Destination = lazy(() => import("./pages/Destination/Destination"));
 const Crew = lazy(() => import("./pages/Crew/Crew"));
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
       {
         path: "/technology",
         element: <Technology />,
+        loader: technologyLoader,
       },
     ],
   },
