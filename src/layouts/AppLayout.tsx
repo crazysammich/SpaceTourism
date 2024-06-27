@@ -2,6 +2,7 @@ import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import classes from "./AppLayout.module.css";
 import Header from "./Header";
 import { LoadingDots } from "../components";
+import { Image } from "@crazysammich/react-components-lib";
 
 function AppLayout() {
   const pathname = useLocation().pathname.replace("/", "");
@@ -20,9 +21,10 @@ function AppLayout() {
             media="(max-width: 768px)"
             srcSet={`/assets/${pathname}/background-${pathname}-tablet.jpg`}
           />
-          <img
+          <Image
             loading="lazy"
             role="presentation"
+            alt=""
             src={`/assets/${pathname}/background-${pathname}-desktop.jpg`}
           />
         </picture>

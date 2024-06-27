@@ -5,7 +5,7 @@ function Logo() {
   return (
     <div className={classes.logoWrapper}>
       <Link to="home">
-        <img src="/assets/shared/logo.svg" alt="space tourism logo" />
+        <img src="/assets/shared/logo.svg" alt="Go to home page" />
       </Link>
     </div>
   );
