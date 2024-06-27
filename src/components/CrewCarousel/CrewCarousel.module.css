@@ -8,6 +8,7 @@
 
 .crewCarousel :global(.carousel__indicators) {
   top: 0;
+  bottom: auto;
 }
 
 .crewCarousel :global(.carousel__indicator) {
