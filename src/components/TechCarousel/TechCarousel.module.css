@@ -1,26 +1,23 @@
-@media screen and (max-width: 25em) {
-  .techCarousel {
-    :global(.carousel__content) {
-      margin-block: 20.4% 0;
-    }
+.techCarousel {
+  :global(.carousel__content) {
+    margin-block-start: clamp(6.25rem, 21vw, 10rem);
   }
-}
 
-@media screen and (min-width: 48em) {
-  .techCarousel {
-    :global(.carousel__content) {
-      margin-block: 20.4% 0;
-    }
+  :global(.carousel__indicators) {
+    bottom: auto;
+    top: 0;
+    margin-block: clamp(2.125rem, 8vw, 3.5rem) 0;
   }
 }
 
 @media screen and (min-width: 80em) {
   .techCarousel {
-    /* display: flex; */
+    display: flex;
     align-items: center;
 
     :global(.carousel__content) {
-      margin-inline: 25% 0;
+      margin-inline-start: 25%;
+      margin-block: 0;
     }
 
     :global(.carousel__indicators) {

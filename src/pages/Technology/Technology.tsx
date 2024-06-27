@@ -14,7 +14,7 @@ function Technology() {
 
   return (
     <main>
-      <h1 className="heading-5 page-heading">
+      <h1 className={`heading-5 page-heading ${classes.techPageHeading}`}>
         <span>03</span> space launch 101
       </h1>
       <div className={`grid ${classes.techSectionWrapper}`}>
