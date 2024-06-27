@@ -1,0 +1,22 @@
+.techSectionWrapper {
+  justify-items: center;
+  gap: 2rem 0;
+}
+
+@media screen and (min-width: 64em) and (max-width: 80em) {
+  :global(.grid).techSectionWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .techSectionWrapper > div:nth-of-type(1) {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  :global(.grid).techSectionWrapper {
+    grid-template-columns: 39.375rem 1fr;
+  }
+}

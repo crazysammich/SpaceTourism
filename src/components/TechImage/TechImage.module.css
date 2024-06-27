@@ -1,0 +1,21 @@
+@media screen and (max-width: 24em) {
+  .techImgWrapper {
+    /* For the spinner */
+    position: relative;
+    width: 120%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .techImg {
+    width: auto;
+    height: auto;
+    max-width: initial;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .techImgWrapper {
+    margin-inline: 25% 0;
+  }
+}

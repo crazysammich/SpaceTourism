@@ -9,9 +9,11 @@
   --font-heading: var(--font-tertiary);
   --font-subheading-1: var(--font-tertiary);
   --font-subheading-2: var(--font-primary);
+  --font-subheading-3: var(--font-primary);
   --font-explore-btn: var(--font-tertiary);
   --font-btn: var(--font-primary);
   --font-nav: var(--font-primary);
+  --font-carousel-indicator: var(--font-tertiary);
 
   --text-primary: #d0d6f9;
   --text-secondary: #ffffff;
@@ -47,11 +49,6 @@
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
 }
 
 html {
@@ -152,6 +149,14 @@ p {
   letter-spacing: 2.35px;
 }
 
+.subheading-3 {
+  font-family: var(--font-subheading-3);
+  color: var(--text-secondary);
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 .fade-in {
   animation: fade-in 250ms ease-in;
 }
@@ -166,7 +171,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 52em) {
+@media only screen and (min-width: 80em) {
   :root {
     text-align: left;
   }

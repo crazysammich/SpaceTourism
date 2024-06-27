@@ -1,0 +1,20 @@
+.techCarouselItem {
+  > h2 {
+    font-family: var(--font-subheading-3);
+    color: var(--text-primary);
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .techCarouselItem {
+    min-height: 303px;
+
+    > p {
+      width: min(43.6ch, 100%);
+    }
+  }
+}

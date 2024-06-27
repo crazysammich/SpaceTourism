@@ -1,0 +1,34 @@
+@media screen and (max-width: 25em) {
+  .techCarousel {
+    :global(.carousel__content) {
+      margin-block: 20.4% 0;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .techCarousel {
+    :global(.carousel__content) {
+      margin-block: 20.4% 0;
+    }
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .techCarousel {
+    /* display: flex; */
+    align-items: center;
+
+    :global(.carousel__content) {
+      margin-inline: 25% 0;
+    }
+
+    :global(.carousel__indicators) {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: min-content;
+      margin: 0;
+    }
+  }
+}
