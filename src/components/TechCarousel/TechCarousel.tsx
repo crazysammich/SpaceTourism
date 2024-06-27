@@ -12,9 +12,9 @@ interface TechCarouselProps {
 
 function TechCarousel({ techData, onTechChange }: TechCarouselProps) {
   const items = techData.map((item) => <TechCarouselItem techItem={item} />);
-  const [carouselType, setCarouselType] = useState<"vertical" | "horizontal">(
-    "vertical"
-  );
+  const [slideDirection, setSlideDirection] = useState<
+    "vertical" | "horizontal"
+  >("vertical");
 
   function handleOnCarouselChange(i: number) {
     onTechChange(i);
@@ -22,7 +22,7 @@ function TechCarousel({ techData, onTechChange }: TechCarouselProps) {
 
   useEffect(() => {
     function onPageResize(entry: ResizeObserverEntry) {
-      setCarouselType(
+      setSlideDirection(
         entry.contentRect.width <= 1024 ? "horizontal" : "vertical"
       );
     }
@@ -38,10 +38,11 @@ function TechCarousel({ techData, onTechChange }: TechCarouselProps) {
 
   return (
     <Carousel
-      type={carouselType}
-      className={classes.techCarousel}
       items={items}
+      className={classes.techCarousel}
+      direction={slideDirection}
       Indicator={TechCarouselIndicator}
+      type="indicator"
       onIndictClick={handleOnCarouselChange}
     />
   );

@@ -15,8 +15,9 @@ function CrewCarousel({ crew, onCarouselChange }: CrewCarouselProps) {
   const crewItems = crew.map((c) => <CrewCarouselItem key={c.name} crew={c} />);
   return (
     <Carousel
-      className={classes.crewCarousel}
       items={crewItems}
+      className={classes.crewCarousel}
+      type="indicator"
       onIndictClick={handleOnIndictClick}
     />
   );
