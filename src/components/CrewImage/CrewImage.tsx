@@ -1,6 +1,6 @@
 import { CrewType } from "../../types";
 import classes from "./CrewImage.module.css";
-import { Image } from "../Image";
+import { Image } from "@crazysammich/react-components-lib";
 
 interface CrewItemProps {
   className?: string;
