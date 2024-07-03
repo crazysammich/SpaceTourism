@@ -12,6 +12,9 @@ function CrewCarousel({ crew, onCarouselChange }: CrewCarouselProps) {
   function handleOnIndictClick(i: number) {
     onCarouselChange(i);
   }
+  function handleOnSwipe(i: number) {
+    onCarouselChange(i);
+  }
   const crewItems = crew.map((c) => <CrewCarouselItem key={c.name} crew={c} />);
   return (
     <Carousel
@@ -19,6 +22,7 @@ function CrewCarousel({ crew, onCarouselChange }: CrewCarouselProps) {
       className={classes.crewCarousel}
       type="indicator"
       onIndictClick={handleOnIndictClick}
+      onSwipe={handleOnSwipe}
     />
   );
 }

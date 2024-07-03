@@ -14,7 +14,9 @@ interface CarouselProps {
   direction?: "horizontal" | "vertical";
   Indicator?: ComponentType<IndicatorProps>;
   type?: "controls" | "indicator" | "both";
-  onIndictClick?: (index: number) => void;
+  onIndictClick?: (i: number) => void;
+  onControlsClick?: (i: number) => void;
+  onSwipe?: (i: number) => void;
 }
 
 function Carousel(props: CarouselProps) {
@@ -27,6 +29,8 @@ function Carousel(props: CarouselProps) {
     Indicator,
     type,
     onIndictClick,
+    onControlsClick,
+    onSwipe,
   } = props;
   return (
     <Cs
@@ -38,6 +42,8 @@ function Carousel(props: CarouselProps) {
       direction={direction}
       Indicator={Indicator}
       onIndictClick={onIndictClick}
+      onControlsClick={onControlsClick}
+      onSwipe={onSwipe}
     />
   );
 }
