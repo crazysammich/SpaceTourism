@@ -76,6 +76,11 @@ p {
   gap: 5rem 0;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
 .main-wrapper {
   margin-inline: auto;
   width: min(1110px, max(327px, 80%));

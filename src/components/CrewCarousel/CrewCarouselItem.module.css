@@ -1,7 +1,9 @@
-.crewCarouselItem {
-  display: flex;
+:global(.flex).crewCarouselItem {
   flex-direction: column;
   align-items: center;
+}
+
+.crewCarouselItem {
   min-height: 250px;
 }
 
@@ -29,5 +31,11 @@
   }
   .crewBio {
     width: 45ch;
+  }
+}
+
+@media screen and (min-width: 85em) {
+  :global(.flex).crewCarouselItem {
+    align-items: flex-start;
   }
 }

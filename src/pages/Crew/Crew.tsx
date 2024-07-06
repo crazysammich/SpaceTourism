@@ -11,6 +11,7 @@ function Crew() {
   function handleOnCarouselChange(i: number) {
     setCurrentSlide(i);
   }
+
   return (
     <main>
       <h1 className="heading-5 page-heading">

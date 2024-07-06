@@ -38,13 +38,18 @@
 
 @media only screen and (min-width: 64em) {
   .crewCarousel :global(.carousel__indicators) {
-    justify-content: flex-start;
-    margin-block-end: 15%;
     bottom: 0;
   }
 
   .crewCarousel :global(.carousel__indicator) {
     width: 15px;
     height: 15px;
+  }
+}
+
+@media screen and (min-width: 85em) {
+  .crewCarousel :global(.carousel__indicators) {
+    justify-content: flex-start;
+    margin-block-end: 15%;
   }
 }
