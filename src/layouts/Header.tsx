@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Navbar } from "../components";
-// import { throttle } from "../utils";
 import classes from "./Header.module.css";
 import { useThrottle } from "../Hooks";
+
 function Header() {
   const prevScrollPos = useRef<number>(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
