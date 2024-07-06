@@ -40,6 +40,7 @@
   .crewCarousel :global(.carousel__indicators) {
     justify-content: flex-start;
     margin-block-end: 15%;
+    bottom: 0;
   }
 
   .crewCarousel :global(.carousel__indicator) {
