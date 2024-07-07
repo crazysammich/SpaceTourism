@@ -3,6 +3,7 @@ import { useRef } from "react";
 function useThrottle() {
   const lastExecTime = useRef(0);
   const pendingArgs = useRef<[]>([]);
+  
   const throttledFn = (cb: () => void, delay = 1) => {
     return (...args: []) => {
       const now = Date.now();
