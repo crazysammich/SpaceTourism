@@ -9,6 +9,8 @@ import { crewLoader, destinationLoader } from "./pages";
 
 import { AppLayout } from "./layouts";
 import { technologyLoader } from "./pages/Technology";
+import { LoadingDots } from "./components";
+import { ErrorPage } from "./pages/ErrorPage";
 const Home = lazy(() => import("./pages/Home/Home"));
 const Destination = lazy(() => import("./pages/Destination/Destination"));
 const Crew = lazy(() => import("./pages/Crew/Crew"));
@@ -17,10 +19,11 @@ const Technology = lazy(() => import("./pages/Technology/Technology"));
 const router = createBrowserRouter([
   {
     element: (
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<LoadingDots />}>
         <AppLayout />
       </Suspense>
     ),
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
