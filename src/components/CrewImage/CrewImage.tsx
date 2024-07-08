@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { CrewType } from "../../types";
 import classes from "./CrewImage.module.css";
-import { Image } from "@crazysammich/react-components-lib";
-import LoadingDots from "../LoadingDots";
+import { Image, Spinner } from "@crazysammich/react-components-lib";
 
 interface CrewItemProps {
   className?: string;
   currentCrew: CrewType;
 }
 
-function CrewImage({ className, currentCrew }: CrewItemProps) {
+function CrewImage({ className, currentCrew, ...otherProps }: CrewItemProps) {
   const [isImgLoading, setIsImgLoading] = useState(true);
 
   function handleOnImgLoad() {
@@ -17,8 +16,9 @@ function CrewImage({ className, currentCrew }: CrewItemProps) {
   }
   return (
     <div className={`${classes.crewImgWrapper} ${className ? className : ""}`}>
-      {isImgLoading && <LoadingDots />}
+      {isImgLoading && <Spinner />}
       <Image
+        {...otherProps}
         className={`fade-in ${classes.crewImg}`}
         src={currentCrew.images.webp}
         alt={`an image of ${currentCrew.role}. ${currentCrew.name}`}
