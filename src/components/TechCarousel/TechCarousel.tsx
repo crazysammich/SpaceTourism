@@ -6,11 +6,13 @@ import classes from "./TechCarousel.module.css";
 import { useEffect, useState } from "react";
 
 interface TechCarouselProps {
+  currentSlide: number;
   techData: TechType[];
   onTechChange: (index: number) => void;
 }
 
-function TechCarousel({ techData, onTechChange }: TechCarouselProps) {
+function TechCarousel(props: TechCarouselProps) {
+  const { currentSlide, techData, onTechChange } = props;
   const items = techData.map((item) => <TechCarouselItem techItem={item} />);
   const [slideDirection, setSlideDirection] = useState<
     "vertical" | "horizontal"
@@ -30,7 +32,6 @@ function TechCarousel({ techData, onTechChange }: TechCarouselProps) {
       entries.forEach(onPageResize);
     });
     resizeObs.observe(document.querySelector("html") as Element);
-
     return () => {
       resizeObs.disconnect();
     };
@@ -40,10 +41,11 @@ function TechCarousel({ techData, onTechChange }: TechCarouselProps) {
     <Carousel
       items={items}
       className={classes.techCarousel}
+      currentIndexArg={currentSlide}
       direction={slideDirection}
       Indicator={TechCarouselIndicator}
       type="indicator"
-      onIndictClick={handleOnCarouselChange}
+      onCarouselChange={handleOnCarouselChange}
     />
   );
 }

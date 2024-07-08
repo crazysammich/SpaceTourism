@@ -1,14 +1,16 @@
 import { Image, Spinner } from "@crazysammich/react-components-lib";
 import { TechType } from "../../types";
 import classes from "./TechImage.module.css";
-import { useState } from "react";
+import { TouchEventHandler, useState } from "react";
 
 interface TechImageProps {
   currentSlide: TechType;
+  onTouchStart?: TouchEventHandler;
+  onTouchEnd?: TouchEventHandler;
 }
 
 function TechImage(props: TechImageProps) {
-  const { currentSlide } = props;
+  const { currentSlide, onTouchStart, onTouchEnd } = props;
   const [isLoading, setIsLoading] = useState(true);
 
   function handleOnImgLoad() {
@@ -16,7 +18,11 @@ function TechImage(props: TechImageProps) {
   }
 
   return (
-    <div className={classes.techImgWrapper}>
+    <div
+      className={classes.techImgWrapper}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
       {isLoading && <Spinner />}
       <picture>
         <source
