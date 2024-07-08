@@ -5,24 +5,21 @@ import CrewCarouselItem from "./CrewCarouselItem";
 
 interface CrewCarouselProps {
   crew: CrewType[];
-  onCarouselChange: (i: number) => void;
+  currentSlide: number;
+  onCrewChange: (i: number) => void;
 }
 
-function CrewCarousel({ crew, onCarouselChange }: CrewCarouselProps) {
-  function handleOnIndictClick(i: number) {
-    onCarouselChange(i);
-  }
-  function handleOnSwipe(i: number) {
-    onCarouselChange(i);
-  }
+function CrewCarousel({ crew, currentSlide, onCrewChange }: CrewCarouselProps) {
   const crewItems = crew.map((c) => <CrewCarouselItem key={c.name} crew={c} />);
+  console.log(currentSlide);
+
   return (
     <Carousel
       items={crewItems}
+      currentIndexArg={currentSlide}
       className={classes.crewCarousel}
       type="indicator"
-      onIndictClick={handleOnIndictClick}
-      onSwipe={handleOnSwipe}
+      onCarouselChange={onCrewChange}
     />
   );
 }

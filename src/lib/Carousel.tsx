@@ -1,7 +1,8 @@
 import type { IndicatorProps } from "@crazysammich/react-components-lib";
 import { Carousel as Cs } from "@crazysammich/react-components-lib";
-import { ComponentType } from "react";
+import { ComponentType, SyntheticEvent } from "react";
 
+type OnHandlerFn<T = SyntheticEvent> = (i: number, e?: T) => void;
 interface CarouselProps {
   items: JSX.Element[];
   autoPlay?: {
@@ -11,12 +12,14 @@ interface CarouselProps {
   };
   animationType?: "slide" | "fade";
   className?: string;
+  currentIndexArg?: number;
   direction?: "horizontal" | "vertical";
   Indicator?: ComponentType<IndicatorProps>;
   type?: "controls" | "indicator" | "both";
-  onIndictClick?: (i: number) => void;
-  onControlsClick?: (i: number) => void;
-  onSwipe?: (i: number) => void;
+  onCarouselChange?: (i: number) => void;
+  onIndictClick?: OnHandlerFn;
+  onControlsClick?: OnHandlerFn;
+  onSwipe?: OnHandlerFn;
 }
 
 function Carousel(props: CarouselProps) {
@@ -25,9 +28,11 @@ function Carousel(props: CarouselProps) {
     autoPlay,
     animationType,
     className,
+    currentIndexArg,
     direction,
     Indicator,
     type,
+    onCarouselChange,
     onIndictClick,
     onControlsClick,
     onSwipe,
@@ -38,9 +43,11 @@ function Carousel(props: CarouselProps) {
       autoPlay={autoPlay}
       animationType={animationType}
       className={className || ""}
+      currentIndexArg={currentIndexArg}
       type={type}
       direction={direction}
       Indicator={Indicator}
+      onCarouselChange={onCarouselChange}
       onIndictClick={onIndictClick}
       onControlsClick={onControlsClick}
       onSwipe={onSwipe}
