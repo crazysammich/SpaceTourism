@@ -4,10 +4,11 @@ import { DestinationsTabs } from "../../components";
 import { useState } from "react";
 
 import classes from "./Destination.module.css";
-import { Image } from "@crazysammich/react-components-lib";
+import { Image, Spinner } from "@crazysammich/react-components-lib";
 
 function Destination() {
   const [currDestination, setCurrDestination] = useState("Moon");
+  const [isImgLoading, setIsImgLoading] = useState(true);
   const destinations = useLoaderData() as DestinationType[];
   const destinationImg = destinations.filter(
     (dest) => dest.name === currDestination
@@ -15,6 +16,10 @@ function Destination() {
 
   function handleOnDestChange(dest: string) {
     setCurrDestination(dest);
+  }
+
+  function handleOnDestImgLoad() {
+    setIsImgLoading(false);
   }
 
   return (
@@ -27,9 +32,11 @@ function Destination() {
           className={`${classes.destinationImg} fade-in`}
           key={currDestination}
         >
+          {isImgLoading && <Spinner />}
           <Image
             src={destinationImg}
             alt={`an image of the ${currDestination}`}
+            onLoad={handleOnDestImgLoad}
           />
         </div>
         <DestinationsTabs
