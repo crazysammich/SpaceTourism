@@ -2,6 +2,10 @@
   border-inline-end: solid var(--border-hover-color);
 }
 
+.mainNavItem > :global(.border-expand)::after {
+  display: none;
+}
+
 .mainNavItem a {
   display: block;
   text-decoration: none;
@@ -24,6 +28,9 @@
 }
 
 @media only screen and (min-width: 48em) {
+  .mainNavItem > :global(.border-expand)::after {
+    display: initial;
+  }
   .mainNavItem a {
     padding-block: 2em;
   }
