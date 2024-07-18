@@ -30,11 +30,9 @@
 
   .mainNavItem:hover {
     border-inline: none;
-    border-block-end: solid var(--border-hover-color);
   }
 
   .mainNavItem:has(a:global(.active)) {
     border-inline: none;
-    border-block-end: 3px solid var(--border-color-primary);
   }
 }

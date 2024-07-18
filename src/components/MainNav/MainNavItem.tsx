@@ -11,7 +11,9 @@ interface MainNavItem {
 function MainNavItem({ linkTo, children, className }: MainNavItem) {
   return (
     <li className={`subheading-3 ${classes.mainNavItem} ${className || ""}`}>
-      <NavLink to={`/${linkTo}` || ""}>{children}</NavLink>
+      <NavLink className="border-expand" to={`/${linkTo}` || ""}>
+        {children}
+      </NavLink>
     </li>
   );
 }

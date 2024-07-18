@@ -33,8 +33,8 @@ function DestinationsTabs({
         {destinationItems.map((tab, i) => (
           <li
             key={tab.title}
-            className={`${classes.tab} ${
-              i === activeTab ? classes.active : ""
+            className={`border-expand ${classes.tab} ${
+              i === activeTab ? "active" : ""
             }`}
           >
             <button onClick={() => handleOnTabClick(i)}>{tab.title}</button>
