@@ -1,0 +1,1 @@
+import{j as r}from"./index-CXBw4fRK.js";function e(){return r.jsx("div",{className:"spinner-container",children:r.jsx("svg",{className:"spinner",viewBox:"0 0 100 100",width:100,height:100,xmlns:"http://www.w3.org/2000/svg",children:r.jsx("circle",{cx:"50",cy:"50",r:20,pathLength:50})})})}export{e as r};
