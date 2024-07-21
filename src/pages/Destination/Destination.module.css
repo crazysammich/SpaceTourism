@@ -18,7 +18,8 @@ div.destinationContainer {
   margin-inline-end: 0.6em;
 }
 
-.destinationImg {
+.destinationImgContainer {
+  position: relative;
   width: clamp(10.937rem, 40vw, 27.812rem);
   height: clamp(10.937rem, 40vw, 27.812rem);
 }

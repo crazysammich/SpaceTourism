@@ -29,7 +29,7 @@ function Destination() {
       </h1>
       <div className={`grid ${classes.destinationContainer} `}>
         <div
-          className={`${classes.destinationImg} fade-in`}
+          className={`${classes.destinationImgContainer} fade-in`}
           key={currDestination}
         >
           {isImgLoading && <Spinner />}
