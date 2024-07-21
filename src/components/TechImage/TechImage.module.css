@@ -1,3 +1,7 @@
+.techImgWrapper {
+  position: relative;
+}
+
 @media screen and (max-width: 24em) {
   .techImgWrapper {
     /*Makes the spinner relative to image container */
