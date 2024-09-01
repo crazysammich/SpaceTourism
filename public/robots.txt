@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /destination
+Allow: /crew
+Allow: /technology
